@@ -30,8 +30,6 @@ public class Persona {
     private int edad;
     private String imgPerfil;
     private String linkCV;
-    private String github;
-    private String linkedin;
     
     @Lob
     private String email;
@@ -47,24 +45,25 @@ public class Persona {
     
     //alt + insert para abrir el menú y agregar constructor y getters y setter
     //contructor vacio
+
     public Persona() {
     }
 
     //constructor con parámetros
-    public Persona(String nombre, String apellido, int edad, String imgPerfil, String linkCV, String github, String linkedin, String email, String clave, String acercaDe) {
+
+    public Persona(String nombre, String apellido, int edad, String imgPerfil, String linkCV, String email, String clave, String acercaDe) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.imgPerfil = imgPerfil;
         this.linkCV = linkCV;
-        this.github = github;
-        this.linkedin = linkedin;
         this.email = email;
         this.clave = clave;
         this.acercaDe = acercaDe;
     }
-
+    
     //getters y setters
+
     public int getId() {
         return id;
     }
@@ -113,22 +112,6 @@ public class Persona {
         this.linkCV = linkCV;
     }
 
-    public String getGithub() {
-        return github;
-    }
-
-    public void setGithub(String github) {
-        this.github = github;
-    }
-
-    public String getLinkedin() {
-        return linkedin;
-    }
-
-    public void setLinkedin(String linkedin) {
-        this.linkedin = linkedin;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -152,6 +135,6 @@ public class Persona {
     public void setAcercaDe(String acercaDe) {
         this.acercaDe = acercaDe;
     }
-    
+   
 }
     
