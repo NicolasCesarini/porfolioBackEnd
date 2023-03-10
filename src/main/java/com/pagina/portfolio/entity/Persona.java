@@ -29,6 +29,7 @@ public class Persona {
     private String apellido;
     private int edad;
     private String imgPerfil;
+    private String imgBanner;
     private String linkCV;
     
     @Lob
@@ -50,17 +51,18 @@ public class Persona {
     }
 
     //constructor con parámetros
-
-    public Persona(String nombre, String apellido, int edad, String imgPerfil, String linkCV, String email, String clave, String acercaDe) {
+    public Persona(String nombre, String apellido, int edad, String imgPerfil, String imgBanner, String linkCV, String email, String clave, String acercaDe) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.imgPerfil = imgPerfil;
+        this.imgBanner = imgBanner;
         this.linkCV = linkCV;
         this.email = email;
         this.clave = clave;
         this.acercaDe = acercaDe;
     }
+    
     
     //getters y setters
 
@@ -104,6 +106,14 @@ public class Persona {
         this.imgPerfil = imgPerfil;
     }
 
+    public String getImgBanner() {
+        return imgBanner;
+    }
+
+    public void setImgBanner(String imgBanner) {
+        this.imgBanner = imgBanner;
+    }
+
     public String getLinkCV() {
         return linkCV;
     }
@@ -135,6 +145,10 @@ public class Persona {
     public void setAcercaDe(String acercaDe) {
         this.acercaDe = acercaDe;
     }
+    
+    
+
+    
    
 }
     
