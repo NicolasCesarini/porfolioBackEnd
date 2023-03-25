@@ -26,6 +26,7 @@ public class Proyecto {
     private String anio;
     @Column(name = "descripción_Proyecto", length = 800)
     private String descripcionProyecto;
+    private String linkProyecto;
     
     //contructor vacio
 
@@ -33,17 +34,17 @@ public class Proyecto {
     }
     
     //constructor con parámetros
-
-    public Proyecto(String imgProyecto, String institucion, String nombreProyecto, String anio, String descripcionProyecto) {
+    public Proyecto(String imgProyecto, String institucion, String nombreProyecto, String anio, String descripcionProyecto, String linkProyecto) {
         this.imgProyecto = imgProyecto;
         this.institucion = institucion;
         this.nombreProyecto = nombreProyecto;
         this.anio = anio;
         this.descripcionProyecto = descripcionProyecto;
+        this.linkProyecto = linkProyecto;
     }
     
+    
     //getters y setters
-
     public int getId() {
         return id;
     }
@@ -91,7 +92,18 @@ public class Proyecto {
     public void setDescripcionProyecto(String descripcionProyecto) {
         this.descripcionProyecto = descripcionProyecto;
     }
+
+    public String getLinkProyecto() {
+        return linkProyecto;
+    }
+
+    public void setLinkProyecto(String linkProyecto) {
+        this.linkProyecto = linkProyecto;
+    }
     
+    
+
+
     
     
 }

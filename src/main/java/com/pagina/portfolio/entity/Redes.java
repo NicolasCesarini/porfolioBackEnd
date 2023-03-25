@@ -21,7 +21,6 @@ public class Redes {
     private int id;
     private String red;
     private String link;
-    private String color;
     
     //contructor vacio
 
@@ -29,15 +28,13 @@ public class Redes {
     }
     
     //constructor con parámetros
-
-    public Redes(String red, String link, String color) {
+    public Redes(String red, String link) {
         this.red = red;
         this.link = link;
-        this.color = color;
     }
     
+    
     //getters y setters
-
     public int getId() {
         return id;
     }
@@ -62,13 +59,5 @@ public class Redes {
         this.link = link;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-   
 
 }
