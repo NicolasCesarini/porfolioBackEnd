@@ -1,7 +1,11 @@
 FROM amazoncorretto:17-alpine-jdk
 
-MAINTAINER nicolas
+WORKDIR /app
+ARG JAR_FILE=target/portfolio-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
 
-COPY target/portfolio-0.0.1-SNAPSHOT.jar portfolio-0.0.1-SNAPSHOT.jar
+ENV JAVA_OPTS=""
+EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/portfolio-0.0.1-SNAPSHOT.jar"]
+# Usa el puerto dinámico de Render
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar app.jar --server.port=${PORT:-8080}"]
