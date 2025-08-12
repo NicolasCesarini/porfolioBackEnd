@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: porfolio-backend
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: MYSQL_ADDON_HOST
+        sync: false
+      - key: MYSQL_ADDON_PORT
+        value: "3306"
+      - key: MYSQL_ADDON_DB
+        sync: false
+      - key: MYSQL_ADDON_USER
+        sync: false
+      - key: MYSQL_ADDON_PASSWORD
+        sync: false
+      - key: DB_POOL_MAX
+        value: "2"
+      - key: DB_POOL_MIN
+        value: "1"
